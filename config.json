@@ -1,0 +1,30 @@
+{
+    "discord": {
+        "clientId": "1370974974625583245",
+        "clientSecret": "0sl_pmlSfVBD-N7S0cJj6B-ZjcQblJWX",
+        "redirectUri": "http://localhost:3000",
+        "apiEndpoint": "https://discord.com/api/v10",
+        "botToken": "MTM3MDk3NDk3NDYyNTU4MzI0NQ.GK3pAK.xlU4hEsCK3nimXn4D6pPxLz4JnbSyXkP7wgEOk",
+        "guildId": "1370641192920023081"
+    },
+    "server": {
+        "port": 3000
+    },
+    "session": {
+        "secret": "your-secret-key-change-this"
+    },
+    "website": {
+        "title": "Connecticut State Police - ERLC",
+        "description": "Your Go-To Source for Connecticut State Police ERLC Updates"
+    },
+    "roles": {
+        "NEWS_MANAGER": ["1370642517661450321"],
+        "ADMIN": ["1370642517661450321"]
+    },
+    "resources": {
+        "Recruitment and Selections": "https://docs.google.com/forms/d/e/your-recruitment-form",
+        "Department Roster": "https://docs.google.com/spreadsheets/d/1I_iCy8nP523Dw-Zuh_BKd9Ceuz7v-yq5cPAHazSJtEc/edit?usp=sharing",
+        "Academy Application": "https://docs.google.com/forms/d/e/your-academy-form",
+        "SOP": "https://docs.google.com/document/d/1YfTmD2qYk9C8WTATDp3l20Y_P2KSKwb4BYSI1NFW2wk/edit?usp=sharing"
+    }
+} 
