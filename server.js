@@ -400,7 +400,7 @@ app.get('*', (req, res) => {
 });
 
 // Start server
-const PORT = config.server.port || 3000;
+const PORT = config.server.port || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 }); 
