@@ -3,12 +3,12 @@
         "clientId": "YOUR_DISCORD_CLIENT_ID",
         "clientSecret": "YOUR_DISCORD_CLIENT_SECRET",
         "botToken": "YOUR_DISCORD_BOT_TOKEN",
-        "redirectUri": "YOUR_REDIRECT_URI",
+        "redirectUri": "https://csperlc.netlify.app/auth/discord/callback",
         "guildId": "YOUR_DISCORD_GUILD_ID",
         "apiEndpoint": "https://discord.com/api/v10"
     },
     "server": {
-        "port": 3000
+        "port": 3001
     },
     "session": {
         "secret": "YOUR_SESSION_SECRET"
