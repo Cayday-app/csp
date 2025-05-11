@@ -1,4 +1,5 @@
-require('dotenv').config();
+// Load config
+const config = require('./config.json');
 const express = require('express');
 const fetch = require('node-fetch');
 const path = require('path');
@@ -6,35 +7,24 @@ const app = express();
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
-// Load public config for client
+// Public config for client
 const publicConfig = {
     discord: {
-        clientId: process.env.DISCORD_CLIENT_ID,
-        redirectUri: process.env.DISCORD_REDIRECT_URI,
-        apiEndpoint: 'https://discord.com/api/v10'
+        clientId: config.discord.clientId,
+        redirectUri: config.discord.redirectUri,
+        apiEndpoint: config.discord.apiEndpoint
     },
-    website: {
-        title: "Connecticut State Police - ERLC",
-        description: "Your Go-To Source for Connecticut State Police ERLC Updates"
-    },
-    roles: {
-        NEWS_MANAGER: process.env.ROLE_NEWS_MANAGER ? process.env.ROLE_NEWS_MANAGER.split(',') : [],
-        ADMIN: process.env.ROLE_ADMIN ? process.env.ROLE_ADMIN.split(',') : []
-    },
-    resources: {
-        "Recruitment and Selections": "https://docs.google.com/forms/d/e/your-recruitment-form",
-        "Department Roster": "https://docs.google.com/spreadsheets/d/1I_iCy8nP523Dw-Zuh_BKd9Ceuz7v-yq5cPAHazSJtEc/edit?usp=sharing",
-        "Academy Application": "https://docs.google.com/forms/d/e/your-academy-form",
-        "SOP": "https://docs.google.com/document/d/1YfTmD2qYk9C8WTATDp3l20Y_P2KSKwb4BYSI1NFW2wk/edit?usp=sharing"
-    }
+    website: config.website,
+    roles: config.roles,
+    resources: config.resources
 };
 
 // Private config for server-side only
 const privateConfig = {
     discord: {
-        clientSecret: process.env.DISCORD_CLIENT_SECRET,
-        botToken: process.env.DISCORD_BOT_TOKEN,
-        guildId: process.env.DISCORD_GUILD_ID
+        clientSecret: config.discord.clientSecret,
+        botToken: config.discord.botToken,
+        guildId: config.discord.guildId
     }
 };
 
@@ -73,7 +63,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(session({
     store: new FileStore(),
-    secret: process.env.SESSION_SECRET,
+    secret: config.session.secret,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -410,7 +400,7 @@ app.get('*', (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = config.server.port || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 }); 

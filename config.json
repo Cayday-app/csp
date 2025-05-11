@@ -1,25 +1,25 @@
 {
     "discord": {
-        "clientId": "1370974974625583245",
-        "clientSecret": "0sl_pmlSfVBD-N7S0cJj6B-ZjcQblJWX",
-        "redirectUri": "http://localhost:3000",
-        "apiEndpoint": "https://discord.com/api/v10",
-        "botToken": "MTM3MDk3NDk3NDYyNTU4MzI0NQ.GK3pAK.xlU4hEsCK3nimXn4D6pPxLz4JnbSyXkP7wgEOk",
-        "guildId": "1370641192920023081"
+        "clientId": "YOUR_DISCORD_CLIENT_ID",
+        "clientSecret": "YOUR_DISCORD_CLIENT_SECRET",
+        "botToken": "YOUR_DISCORD_BOT_TOKEN",
+        "redirectUri": "YOUR_REDIRECT_URI",
+        "guildId": "YOUR_DISCORD_GUILD_ID",
+        "apiEndpoint": "https://discord.com/api/v10"
     },
     "server": {
         "port": 3000
     },
     "session": {
-        "secret": "your-secret-key-change-this"
+        "secret": "YOUR_SESSION_SECRET"
     },
     "website": {
         "title": "Connecticut State Police - ERLC",
         "description": "Your Go-To Source for Connecticut State Police ERLC Updates"
     },
     "roles": {
-        "NEWS_MANAGER": ["1370642517661450321"],
-        "ADMIN": ["1370642517661450321"]
+        "NEWS_MANAGER": ["YOUR_NEWS_MANAGER_ROLE_ID"],
+        "ADMIN": ["YOUR_ADMIN_ROLE_ID"]
     },
     "resources": {
         "Recruitment and Selections": "https://docs.google.com/forms/d/e/your-recruitment-form",
